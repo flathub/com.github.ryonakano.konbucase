@@ -15,6 +15,15 @@ modules:
         url: https://github.com/ryonakano/chcase.git
         tag: '2.1.0'
         commit: 7b1b7748894763d1e4f56fa941ea2186d7f79313
+
+  - name: granite
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/elementary/granite.git
+        tag: '6.2.0'
+        commit: 4ab145c28bb3db6372fe519e8bd79c645edfcda3
+
   - name: konbucase
     buildsystem: meson
     config-opts:
@@ -23,5 +32,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
-        tag: '3.3.0'
-        commit: bd5c656d95ffd7f4f8393544d2b3aed52ccea4d3
+        tag: '3.4.0'
+        commit: 3dadb31a4ee384936185ac0d03af24ac884e8c1d
