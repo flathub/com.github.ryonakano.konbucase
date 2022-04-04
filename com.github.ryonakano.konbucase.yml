@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.konbucase
 runtime: org.gnome.Platform
-runtime-version: '41'
+runtime-version: '42'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.konbucase
 finish-args:
@@ -28,9 +28,8 @@ modules:
     buildsystem: meson
     config-opts:
       - -Dis_native_build=false
-      - -Dfor_pantheon=false
     sources:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
-        tag: '3.4.0'
-        commit: 3dadb31a4ee384936185ac0d03af24ac884e8c1d
+        tag: '3.4.1'
+        commit: 986bd4fbf376cbf1db47d07dc15eb9af27ecad65
