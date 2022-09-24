@@ -32,4 +32,6 @@ modules:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
 #        tag: '3.4.2'
-        commit: 535841d43675625db01548f3db6ee108dc3cbab3
+        commit: 8a69a4d5900f8c23132a08de835a996840bd4d6d
+      - type: patch
+        path: appdata-screenshots.patch
