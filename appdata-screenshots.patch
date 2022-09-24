@@ -1,0 +1,18 @@
+diff --git a/data/konbucase.appdata.xml.in b/data/konbucase.appdata.xml.in
+index b373f76..4804e77 100644
+--- a/data/konbucase.appdata.xml.in
++++ b/data/konbucase.appdata.xml.in
+@@ -20,11 +20,11 @@
+   <screenshots>
+     <screenshot type="default">
+       <caption>Light mode</caption>
+-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshots/pantheon/screenshot-light.png</image>
++      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshots/gnome/screenshot-light.png</image>
+     </screenshot>
+     <screenshot>
+       <caption>Dark mode</caption>
+-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshots/pantheon/screenshot-dark.png</image>
++      <image>https://raw.githubusercontent.com/ryonakano/konbucase/main/data/screenshots/gnome/screenshot-dark.png</image>
+     </screenshot>
+   </screenshots>
+ 
