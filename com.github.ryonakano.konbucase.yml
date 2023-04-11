@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.konbucase
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '44'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.konbucase
 finish-args:
@@ -12,27 +12,27 @@ modules:
   - name: chcase
     buildsystem: meson
     sources:
-      - type: git
-        url: https://github.com/ryonakano/chcase.git
-        tag: '2.1.0'
-        commit: 7b1b7748894763d1e4f56fa941ea2186d7f79313
+      - type: archive
+        url: https://github.com/ryonakano/chcase/archive/refs/tags/2.1.0.tar.gz
+        sha256: c5dfa84ff64eda76296352734ea48f0a537f74bd58b8c5fd7a86a5ab26297efd
 
   - name: granite
     buildsystem: meson
     sources:
-      - type: git
-        url: https://github.com/elementary/granite.git
-        tag: '7.0.0'
-        commit: 41020886ee56f0a489b977a389da10a6ba0cd131
+      - type: archive
+        url: https://github.com/elementary/granite/archive/refs/tags/7.2.0.tar.gz
+        sha256: 474b1ce3275e4065f48cc11b8bedaa6d976af0fb9b73c795300659d06ef3beef
 
   - name: konbucase
     buildsystem: meson
     config-opts:
-      - -Dis_native_build=false
+      - -Dnative_build=false
     sources:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
-        tag: '4.0.0'
-        commit: a9866d650c05878531a9b92b4cc5d68f5de8cddb
+        commit: f785e9f261fafd37546f3ce7018aeaafa93e5920
+          #      - type: archive
+          #        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.0.1.tar.gz
+          #        sha256: 
       - type: patch
-        path: appdata-screenshots.patch
+        path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
