@@ -28,11 +28,8 @@ modules:
     config-opts:
       - -Dnative_build=false
     sources:
-      - type: git
-        url: https://github.com/ryonakano/konbucase.git
-        commit: f785e9f261fafd37546f3ce7018aeaafa93e5920
-          #      - type: archive
-          #        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.0.1.tar.gz
-          #        sha256: 
+      - type: archive
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.0-beta.tar.gz
+        sha256: 163fcdeea85a5e77641b5cb199c366808f45176dfbe9e8073e27428b436ada51
       - type: patch
         path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
