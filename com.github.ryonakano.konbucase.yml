@@ -29,7 +29,7 @@ modules:
       - -Dnative_build=false
     sources:
       - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.0-beta.2.tar.gz
-        sha256: 9a8fc19c1b4d3d2b2efdc97911b0a6c4a49e2e8c52d80cb82b7093e753512ff2
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.0-beta.3.tar.gz
+        sha256: 995f0830557f04e610b7aa8c8ca9592f3256c899d7a89fe9b3c2a940c96fc1f4
       - type: patch
         path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
