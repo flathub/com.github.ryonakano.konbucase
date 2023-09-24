@@ -1,12 +1,12 @@
-From 6ec00a01c51880ba23b29f171197fe68fb819e9e Mon Sep 17 00:00:00 2001
+From bd186c3c6011e6353aee6d63abe10ac1c1148880 Mon Sep 17 00:00:00 2001
 From: Ryo Nakano <ryonakaknock3@gmail.com>
-Date: Sun, 24 Sep 2023 07:33:10 +0900
+Date: Sun, 24 Sep 2023 13:47:37 +0900
 Subject: [PATCH] meson: Disable styles
 
 ---
  lib/Init.vala   | 6 ++++++
- lib/meson.build | 2 --
- 2 files changed, 6 insertions(+), 2 deletions(-)
+ lib/meson.build | 3 ---
+ 2 files changed, 6 insertions(+), 3 deletions(-)
 
 diff --git a/lib/Init.vala b/lib/Init.vala
 index 8f8ded67..0d974b1e 100644
@@ -46,7 +46,7 @@ index 8f8ded67..0d974b1e 100644
          if (app_provider != null) {
              Gtk.StyleContext.add_provider_for_display (display, app_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 diff --git a/lib/meson.build b/lib/meson.build
-index 6882c8d0..d839ff0e 100644
+index 6882c8d0..86d1a07e 100644
 --- a/lib/meson.build
 +++ b/lib/meson.build
 @@ -1,5 +1,3 @@
@@ -55,6 +55,14 @@ index 6882c8d0..d839ff0e 100644
  libgranite_sources = files(
      'DateTime.vala',
      'Constants.vala',
+@@ -61,7 +59,6 @@ libgranite = library(
+     meson.project_name(),
+ 
+     libgranite_sources,
+-    stylesheet_resource,
+     config_vala,
+ 
+     dependencies: [
 -- 
 2.34.1
 
