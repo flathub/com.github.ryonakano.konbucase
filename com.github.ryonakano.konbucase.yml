@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.konbucase
 runtime: org.gnome.Platform
-runtime-version: '44'
+runtime-version: '45'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.konbucase
 finish-args:
@@ -13,23 +13,34 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/ryonakano/chcase/archive/refs/tags/2.1.0.tar.gz
-        sha256: c5dfa84ff64eda76296352734ea48f0a537f74bd58b8c5fd7a86a5ab26297efd
+        url: https://github.com/ryonakano/chcase/archive/refs/tags/2.2.0.tar.gz
+        sha256: a27c36c5b257fcfb1279c5128cf213b941b2cb76cfba9646b9d819fc369b6297
+
+  - name: ryokucha
+    buildsystem: meson
+    sources:
+      - type: archive
+        url: https://github.com/ryonakano/ryokucha/archive/refs/tags/0.1.0.tar.gz
+        sha256: 89b9492b33498f46c4f4dd79ef3cbf526069a5422439766382ffdcd0ba1da159
 
   - name: granite
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/elementary/granite/archive/refs/tags/7.2.0.tar.gz
-        sha256: 474b1ce3275e4065f48cc11b8bedaa6d976af0fb9b73c795300659d06ef3beef
+        url: https://github.com/elementary/granite/archive/refs/tags/7.3.0.tar.gz
+        sha256: 83c517ed9e56689a7279a75406cbf94a135a301739e655bfcc23dafa1087ef5e
+      - type: patch
+        # We use Granite just for color preferences and not use any widgets
+        # so disable building styles that requires addional dependencies, sassc
+        path: 0001-meson-Disable-styles.patch
 
   - name: konbucase
     buildsystem: meson
     config-opts:
-      - -Dnative_build=false
+      - '-Duse_submodule=false'
     sources:
       - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.0.tar.gz
-        sha256: bc6e84f5786ed74629f55d3cb9f9c097a08aa568ed817516e9c86903b03e5a6d
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.1.tar.gz
+        sha256: d2b6e55c08e7fe81518498deb3a51841118c17b83ed0954aef1fa980b807a1a5
       - type: patch
         path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
