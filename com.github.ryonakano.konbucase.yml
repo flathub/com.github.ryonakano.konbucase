@@ -27,8 +27,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/elementary/granite/archive/refs/tags/7.3.0.tar.gz
-        sha256: 83c517ed9e56689a7279a75406cbf94a135a301739e655bfcc23dafa1087ef5e
+        url: https://github.com/elementary/granite/archive/refs/tags/7.4.0.tar.gz
+        sha256: 594fe6670940bf2e5d094c73071025d77efab9c5b147a6f64134fe10d370e40e
       - type: patch
         # We use Granite just for color preferences and not use any widgets
         # so disable building styles that requires addional dependencies, sassc
