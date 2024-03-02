@@ -43,11 +43,8 @@ modules:
     config-opts:
       - '-Duse_submodule=false'
     sources:
-      #      - type: archive
-      #        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.1.tar.gz
-      #        sha256: d2b6e55c08e7fe81518498deb3a51841118c17b83ed0954aef1fa980b807a1a5
-      - type: git
-        url: https://github.com/ryonakano/konbucase.git
-        commit: 1463365887607d7c051039e7114c32f3bce89e77
+      - type: archive
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.2.tar.gz
+        sha256: de18f70e01ff2fa56d03db4b3984eb207c76bcff47ea41699a5bbfeeffbc10a0
       - type: patch
         path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
