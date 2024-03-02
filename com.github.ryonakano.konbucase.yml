@@ -25,6 +25,10 @@ modules:
 
   - name: granite
     buildsystem: meson
+    cleanup:
+      - '/share/applications'
+      - '/share/metainfo'
+      - '/share/icons'
     sources:
       - type: archive
         url: https://github.com/elementary/granite/archive/refs/tags/7.4.0.tar.gz
@@ -39,8 +43,11 @@ modules:
     config-opts:
       - '-Duse_submodule=false'
     sources:
-      - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.1.tar.gz
-        sha256: d2b6e55c08e7fe81518498deb3a51841118c17b83ed0954aef1fa980b807a1a5
+      #      - type: archive
+      #        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.1.tar.gz
+      #        sha256: d2b6e55c08e7fe81518498deb3a51841118c17b83ed0954aef1fa980b807a1a5
+      - type: git
+        url: https://github.com/ryonakano/konbucase.git
+        commit: aff707dd3a60c05bec982cc9344658b8d3921da1
       - type: patch
         path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
