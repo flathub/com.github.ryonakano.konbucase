@@ -20,18 +20,24 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/ryonakano/ryokucha/archive/refs/tags/0.1.0.tar.gz
-        sha256: 89b9492b33498f46c4f4dd79ef3cbf526069a5422439766382ffdcd0ba1da159
+        url: https://github.com/ryonakano/ryokucha/archive/refs/tags/0.2.0.tar.gz
+        sha256: 40c038798cafd6f8f2de00b19a27b89042197a301b256b2afa8da35fcc21a2f6
 
   - name: granite
     buildsystem: meson
+    cleanup:
+      - '/share/applications'
+      - '/share/metainfo'
+      - '/share/icons'
     sources:
       - type: archive
-        url: https://github.com/elementary/granite/archive/refs/tags/7.3.0.tar.gz
-        sha256: 83c517ed9e56689a7279a75406cbf94a135a301739e655bfcc23dafa1087ef5e
+        url: https://github.com/elementary/granite/archive/refs/tags/7.4.0.tar.gz
+        sha256: 594fe6670940bf2e5d094c73071025d77efab9c5b147a6f64134fe10d370e40e
       - type: patch
-        # We use Granite just for color preferences and not use any widgets
-        # so disable building styles that requires addional dependencies, sassc
+        # Granite bundles stylesheets for some widgets and that requires addional dependencies, sassc.
+        # However, these stylesheets don't seem to be applied unless the host system uses elementary stylesheet.
+        # We don't expect elementary OS users install the app from Flathub, so disable building stylesheet
+        # to lessen number of dependencies and package size.
         path: 0001-meson-Disable-styles.patch
 
   - name: konbucase
@@ -40,7 +46,7 @@ modules:
       - '-Duse_submodule=false'
     sources:
       - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.1.tar.gz
-        sha256: d2b6e55c08e7fe81518498deb3a51841118c17b83ed0954aef1fa980b807a1a5
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.1.2.tar.gz
+        sha256: de18f70e01ff2fa56d03db4b3984eb207c76bcff47ea41699a5bbfeeffbc10a0
       - type: patch
         path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
