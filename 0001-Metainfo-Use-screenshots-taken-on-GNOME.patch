@@ -1,6 +1,6 @@
-From 0a058074387401074d0747c571fc17ff13766029 Mon Sep 17 00:00:00 2001
+From 243c96688ff768a8eb42b23b75fd0f599e900743 Mon Sep 17 00:00:00 2001
 From: Ryo Nakano <ryonakaknock3@gmail.com>
-Date: Sat, 2 Mar 2024 11:14:15 +0900
+Date: Sun, 28 Apr 2024 15:06:57 +0900
 Subject: [PATCH] Metainfo: Use screenshots taken on GNOME
 
 ---
@@ -8,21 +8,21 @@ Subject: [PATCH] Metainfo: Use screenshots taken on GNOME
  1 file changed, 2 insertions(+), 2 deletions(-)
 
 diff --git a/data/konbucase.metainfo.xml.in b/data/konbucase.metainfo.xml.in
-index 8dabdd4..2f1c6ff 100644
+index 6f0d185..9cab454 100644
 --- a/data/konbucase.metainfo.xml.in
 +++ b/data/konbucase.metainfo.xml.in
 @@ -23,12 +23,12 @@
    <screenshots>
      <screenshot type="default">
        <caption>App window in the light mode</caption>
--      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/pantheon/screenshot-light.png</image>
-+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/gnome/screenshot-light.png</image>
+-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.2.0/data/screenshots/pantheon/screenshot-light.png</image>
++      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.2.0/data/screenshots/gnome/screenshot-light.png</image>
      </screenshot>
  
      <screenshot>
        <caption>App window in the dark mode</caption>
--      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/pantheon/screenshot-dark.png</image>
-+      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.1.2/data/screenshots/gnome/screenshot-dark.png</image>
+-      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.2.0/data/screenshots/pantheon/screenshot-dark.png</image>
++      <image>https://raw.githubusercontent.com/ryonakano/konbucase/4.2.0/data/screenshots/gnome/screenshot-dark.png</image>
      </screenshot>
    </screenshots>
  
