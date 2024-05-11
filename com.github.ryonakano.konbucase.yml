@@ -25,30 +25,12 @@ modules:
         url: https://github.com/ryonakano/chcase/archive/refs/tags/2.3.0.tar.gz
         sha256: c1bdc394bdf8f782882d311f3c66a1ed768c7f1345eabc049e548ff9ae69ad37
 
-  - name: granite
-    buildsystem: meson
-    cleanup:
-      - '/share/applications'
-      - '/share/metainfo'
-      - '/share/icons'
-    sources:
-      - type: archive
-        url: https://github.com/elementary/granite/archive/refs/tags/7.4.0.tar.gz
-        sha256: 594fe6670940bf2e5d094c73071025d77efab9c5b147a6f64134fe10d370e40e
-      - type: patch
-        # Granite bundles stylesheets for some widgets and that requires addional dependencies, sassc.
-        # However, these stylesheets don't seem to be applied unless the host system uses elementary stylesheet.
-        # We don't expect elementary OS users install the app from Flathub, so disable building stylesheet
-        # to lessen number of dependencies and package size.
-        path: 0001-meson-Disable-styles.patch
-
   - name: konbucase
     buildsystem: meson
     config-opts:
       - '-Duse_submodule=false'
+      - '-Dgranite=disabled'
     sources:
       - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.2.0.tar.gz
-        sha256: dd16a506b29918ee5a0f24503f42201edc63f57fd637c17e3ca9bab1eb4a985c
-      - type: patch
-        path: 0001-Metainfo-Use-screenshots-taken-on-GNOME.patch
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.3.0.tar.gz
+        sha256: 15f5259647b8acde4c2744f917e290bb6ce67accbf669cd59b5a0ed430ee7e1d
