@@ -32,5 +32,11 @@ modules:
       - '-Dgranite=disabled'
     sources:
       - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.3.0.tar.gz
-        sha256: 15f5259647b8acde4c2744f917e290bb6ce67accbf669cd59b5a0ed430ee7e1d
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.3.1.tar.gz
+        sha256: baf8ff906f58520d648ecc561e18db0a7fdd514107a1f06208ed848a3c3e9b61
+    post-install:
+      # workaround for non-png-icon-in-hicolor-size-folder lint error
+      # TODO: Fix in the next upstream release
+      - mkdir -p /app/share/icons/hicolor/scalable/apps
+      - mv /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - find /app/share/icons/hicolor -type f -not -path "*scalable*" -not -path "*actions*" -name "*.svg" -delete
