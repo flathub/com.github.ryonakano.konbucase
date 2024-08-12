@@ -32,5 +32,5 @@ modules:
       - '-Dgranite=disabled'
     sources:
       - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.3.0.tar.gz
-        sha256: 15f5259647b8acde4c2744f917e290bb6ce67accbf669cd59b5a0ed430ee7e1d
+        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.3.1.tar.gz
+        sha256: baf8ff906f58520d648ecc561e18db0a7fdd514107a1f06208ed848a3c3e9b61
