@@ -42,5 +42,4 @@ modules:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
         #tag: 4.4.0
-        branch: release-4.4.0
         commit: 94e7a3ada2455f78333d44d2acc0a44706411300
