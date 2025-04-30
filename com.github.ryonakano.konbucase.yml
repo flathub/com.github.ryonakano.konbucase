@@ -1,42 +1,45 @@
-app-id: com.github.ryonakano.konbucase
+id: com.github.ryonakano.konbucase
 runtime: org.gnome.Platform
-runtime-version: '47'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.konbucase
 finish-args:
-  - '--share=ipc'
-  - '--socket=wayland'
-  - '--socket=fallback-x11'
-  - '--device=dri'
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
 modules:
   - name: blueprint-compiler
     buildsystem: meson
     cleanup:
-      - "*"
+      - '*'
     sources:
-      - type: archive
-        url: https://gitlab.gnome.org/jwestman/blueprint-compiler/-/archive/v0.12.0/blueprint-compiler-v0.12.0.tar.gz
-        sha256: 6dbb4ea851cec164030abded5949ea77ff92032e23527e1c0597d7efe0c36a81
+      - type: git
+        url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
+        tag: v0.16.0
+        commit: 04ef0944db56ab01307a29aaa7303df6067cb3c0
+        x-checker-data:
+          type: git
+          tag-pattern: ^v([\d.]+)$
 
   - name: chcase
     buildsystem: meson
     sources:
-      - type: archive
-        url: https://github.com/ryonakano/chcase/archive/refs/tags/2.3.0.tar.gz
-        sha256: c1bdc394bdf8f782882d311f3c66a1ed768c7f1345eabc049e548ff9ae69ad37
+      - type: git
+        url: https://github.com/ryonakano/chcase.git
+        tag: 2.3.0
+        commit: e1c664fdd8bded036fa1ce60747e1f92f889c2c4
+        x-checker-data:
+          type: git
+          tag-pattern: ^([\d.]+)$
 
   - name: konbucase
     buildsystem: meson
     config-opts:
-      - '-Duse_submodule=false'
-      - '-Dgranite=disabled'
+      - -Duse_submodule=false
+      - -Dgranite=disabled
     sources:
-      - type: archive
-        url: https://github.com/ryonakano/konbucase/archive/refs/tags/4.3.1.tar.gz
-        sha256: baf8ff906f58520d648ecc561e18db0a7fdd514107a1f06208ed848a3c3e9b61
-    post-install:
-      # workaround for non-png-icon-in-hicolor-size-folder lint error
-      # TODO: Fix in the next upstream release
-      - mkdir -p /app/share/icons/hicolor/scalable/apps
-      - mv /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
-      - find /app/share/icons/hicolor -type f -not -path "*scalable*" -not -path "*actions*" -name "*.svg" -delete
+      - type: git
+        url: https://github.com/ryonakano/konbucase.git
+        tag: 4.4.0
+        commit: 5009d9f25048a2629ea38b3225740450a7dbfb23
