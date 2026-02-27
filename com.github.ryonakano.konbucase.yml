@@ -16,8 +16,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.gnome.org/jwestman/blueprint-compiler.git
-        tag: v0.18.0
-        commit: 07c9c9df9cd1b6b4454ecba21ee58211e9144a4b
+        tag: v0.20.0
+        commit: aa5298cc1677cf855bd61f9671607362bd203f4f
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
@@ -27,8 +27,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ryonakano/chcase.git
-        tag: 2.3.0
-        commit: e1c664fdd8bded036fa1ce60747e1f92f889c2c4
+        tag: 2.4.0
+        commit: 0ce179bd1766309514a2495b01ad0fec69586ef8
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
