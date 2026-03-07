@@ -16,13 +16,9 @@ modules:
   - name: chcase
     buildsystem: meson
     sources:
-      - type: git
-        url: https://github.com/ryonakano/chcase.git
-        tag: 2.4.0
-        commit: 0ce179bd1766309514a2495b01ad0fec69586ef8
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
+      - type: archive
+        url: https://github.com/ryonakano/chcase/archive/2.4.0.tar.gz
+        sha256: 73718fba76e67f7374b3573fc58e785c7ca3e9482ad1de9d29046c837fe76cac
 
   - name: konbucase
     buildsystem: meson
@@ -32,5 +28,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
-        tag: 4.4.0
-        commit: 5009d9f25048a2629ea38b3225740450a7dbfb23
+        #tag: 4.5.0
+        #commit: 5009d9f25048a2629ea38b3225740450a7dbfb23
+        commit: 1e9c4ff1742267249a8a73f8eafff3409f01981e
