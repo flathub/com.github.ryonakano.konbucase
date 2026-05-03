@@ -28,6 +28,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
-        #tag: 4.5.1
-        #commit: 19ef0205f624352d28ac940fc6f5711d527f1fba
-        commit: b6d36c719fc5b4e6fdfa850a2feda10d8cac4f12
+        tag: 4.5.1
+        commit: 5050aad40955d9d202a12bedce1744475f82a49f
