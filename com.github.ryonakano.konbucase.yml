@@ -1,6 +1,6 @@
 id: com.github.ryonakano.konbucase
 runtime: org.gnome.Platform
-runtime-version: '50'
+runtime-version: '51'
 sdk: org.gnome.Sdk
 command: com.github.ryonakano.konbucase
 finish-args:
@@ -17,8 +17,8 @@ modules:
     buildsystem: meson
     sources:
       - type: archive
-        url: https://github.com/ryonakano/chcase/archive/2.4.0.tar.gz
-        sha256: 73718fba76e67f7374b3573fc58e785c7ca3e9482ad1de9d29046c837fe76cac
+        url: https://github.com/ryonakano/chcase/archive/3.0.0.tar.gz
+        sha256: ad858cf37567505811e7b8bd6300917c82e37de1da9d8642f4fc8f83f512a569
 
   - name: konbucase
     buildsystem: meson
@@ -28,5 +28,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/ryonakano/konbucase.git
-        tag: 4.5.1
-        commit: 5050aad40955d9d202a12bedce1744475f82a49f
+        #tag: 5.0.0
+        commit: 495cbaaec50c9770c984a63736b9e34304e56030
